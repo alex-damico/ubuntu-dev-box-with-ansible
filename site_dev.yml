@@ -4,7 +4,7 @@
     - common
     - google-chrome
     - snap
-    # - snap_dev
-    # - vscode-extensions
-    # - docker-compose
-    # - docker-users
+    - snap_dev
+    - vscode-extensions
+    - docker-compose
+    - docker-users
