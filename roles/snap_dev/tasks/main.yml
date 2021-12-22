@@ -1,0 +1,7 @@
+---
+- name: Install programs dev
+  become: true
+  community.general.snap:
+    classic: yes
+    name: "{{ item }}" 
+  loop: "{{ programs }}"

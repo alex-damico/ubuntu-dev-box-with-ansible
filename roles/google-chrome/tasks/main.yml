@@ -1,0 +1,24 @@
+---
+- name: Add google chrome's apt signing key
+  become: true
+  apt_key:
+    url: "{{ key }}"
+    state: present
+
+- name: Add google chrome's apt repo
+  become: true
+  apt_repository:
+    repo: "{{ ubuntu_url }}"
+    state: present
+    filename: google-chrome
+
+- name: Update repositories cache
+  become: true
+  apt:
+    update_cache: yes
+
+- name: Install Google Chrome
+  become: true
+  apt:
+    name: google-chrome-stable
+    state: present

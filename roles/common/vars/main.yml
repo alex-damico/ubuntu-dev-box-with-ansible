@@ -1,0 +1,6 @@
+---
+base:
+- htop
+- build-essential
+- git
+- pdfarranger

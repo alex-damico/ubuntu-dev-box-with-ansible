@@ -1,0 +1,10 @@
+---
+- name: Upgrade the OS
+  become: true
+  apt:
+    upgrade: full
+- name: Install programs
+  become: true
+  apt:
+    name: "{{ item }}"
+  loop: "{{ base }}"

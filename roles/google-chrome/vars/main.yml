@@ -1,0 +1,4 @@
+---
+key: https://dl.google.com/linux/linux_signing_key.pub
+
+ubuntu_url: deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main
