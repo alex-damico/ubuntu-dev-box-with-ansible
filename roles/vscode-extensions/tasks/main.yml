@@ -1,5 +1,4 @@
 ---
 - name: install some popular vscode extensions
-  become: true
   command: code --install-extension {{ item }}
   with_items: "{{ vscode_extensions }}"

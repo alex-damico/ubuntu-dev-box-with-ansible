@@ -1,4 +1,4 @@
 ---
 vscode_extensions:
-  - vscode-icons-team.vscode-icons
-  - ms-azuretools.vscode-docker
+- vscode-icons-team.vscode-icons
+- ms-azuretools.vscode-docker
