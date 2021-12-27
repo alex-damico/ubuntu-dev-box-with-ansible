@@ -22,7 +22,7 @@ ansible-galaxy install comcast.sdkman
 ansible-galaxy install grzegorznowak.nvm_node
 ```
 
-## Confiurazione
+## Configuration
 - common
     - Upgrade the OS
     - Install programs
@@ -80,4 +80,3 @@ ansible-playbook site_dev.yml
 
 NOTE:
 - oh-my-zsh (con tutti i plugins)
-- nvm
