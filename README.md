@@ -8,10 +8,18 @@ ansible-galaxy collection install community.general
 
 Git clone del progetto
 
-NOTE: 
-Only Dev
+NOTE (Only Dev):
+- Sdkman
+    - [github](https://github.com/Comcast/ansible-sdkman)
+    - [galaxy](https://galaxy.ansible.com/comcast/sdkman)
 ```
 ansible-galaxy install comcast.sdkman
+```
+- NVM
+    - [github](https://github.com/grzegorznowak/ansible-nvm-node)
+    - [galaxy](https://galaxy.ansible.com/grzegorznowak/nvm_node)
+```
+ansible-galaxy install grzegorznowak.nvm_node
 ```
 
 ## Confiurazione
@@ -33,7 +41,7 @@ ansible-galaxy install comcast.sdkman
         - vlc
         - libreoffice
         - flameshot
-- snap_dev
+- snap-dev
     - Install programs
         - docker
         - termius-app
@@ -47,6 +55,8 @@ ansible-galaxy install comcast.sdkman
     - Install docker-compose
 - docker-users
     - enable user 
+- Sdkman
+- nvm
 
 ## Start not dev
 ```
@@ -70,5 +80,4 @@ ansible-playbook site_dev.yml
 
 NOTE:
 - oh-my-zsh (con tutti i plugins)
-- sdkman
 - nvm
