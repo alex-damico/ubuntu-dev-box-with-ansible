@@ -1,10 +1,9 @@
 ---
 - hosts: localhost
   vars:
+    user: dakon
     docker_users:
-    - dakon
-    sdkman_user: dakon
-    sdkman_group: dakon
+    - "{{ user }}"
   roles:
     - common
     - google-chrome
@@ -14,8 +13,8 @@
     - docker-compose
     - docker-users
     - role: comcast.sdkman
-      sdkman_user: dakon
-      sdkman_group: dakon
+      sdkman_user: "{{ user }}"
+      sdkman_group: "{{ user }}"
       sdkman_auto_answer: true
       sdkman_update: true
       sdkman_install_packages:
@@ -27,3 +26,15 @@
     - role: grzegorznowak.nvm_node
       become: true
       nvm_node_version: "16.13.1"
+    - role: gantsign.oh-my-zsh
+      users:
+      - username: "{{ user }}"
+        oh_my_zsh:
+          theme: robbyrussell
+          plugins:
+            - git
+            - nvm
+            - node
+            - sdk
+            - docker
+            - docker-compose

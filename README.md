@@ -21,6 +21,18 @@ ansible-galaxy install comcast.sdkman
 ```
 ansible-galaxy install grzegorznowak.nvm_node
 ```
+- oh-my-zsh
+    - [github](https://github.com/gantsign/ansible-role-oh-my-zsh)
+    - [galaxy](https://galaxy.ansible.com/gantsign/oh-my-zsh)
+```
+ansible-galaxy install gantsign.oh-my-zsh
+```
+- antigen (feature)
+    - [github](https://github.com/gantsign/ansible_role_antigen)
+    - [galaxy](https://galaxy.ansible.com/gantsign/antigen)
+```
+ansible-galaxy install gantsign.antigen
+```
 
 ## Configuration
 - common
