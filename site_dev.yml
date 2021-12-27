@@ -1,10 +1,16 @@
 ---
 - hosts: localhost
+  vars:
+    docker_users:
+    - dakon
+    sdkman_user: dakon
+    sdkman_group: dakon
   roles:
     - common
     - google-chrome
     - snap
-    - snap_dev
+    - snap-dev
     - vscode-extensions
     - docker-compose
     - docker-users
+    - sdkman

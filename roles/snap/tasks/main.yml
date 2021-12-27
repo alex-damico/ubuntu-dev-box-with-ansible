@@ -1,7 +1,2 @@
 ---
-- name: Install programs
-  become: true
-  community.general.snap:
-    classic: yes
-    name: "{{ item }}" 
-  loop: "{{ programs }}"
+- role: comcast.sdkman

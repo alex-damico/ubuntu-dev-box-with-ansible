@@ -1,6 +1,6 @@
 # ubuntu-dev-box-with-ansible
 
-## Requisiti
+## Requirements
 ```
 sudo apt install git ansible
 ansible-galaxy collection install community.general
@@ -8,12 +8,19 @@ ansible-galaxy collection install community.general
 
 Git clone del progetto
 
+NOTE: 
+Only Dev
+```
+ansible-galaxy install comcast.sdkman
+```
+
 ## Confiurazione
 - common
     - Upgrade the OS
     - Install programs
         - htop
         - build-essential
+        - net-tools
         - git
         - pdfarranger
 - google-chrome
@@ -51,11 +58,17 @@ ansible-playbook site.yml
 ansible-playbook site_dev.yml
 ```
 
+## Example override
+```
+---
+- hosts: localhost
+  roles:
+    - role: common
+      base:
+      - filezilla
+```
+
 NOTE:
 - oh-my-zsh (con tutti i plugins)
 - sdkman
 - nvm
-
-Verificare:
-- pdfarranger
-- flameshot

@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  roles:
+  - role: comcast.sdkman
+    sdkman_user: dakon
+    sdkman_group: dakon
+    sdkman_auto_answer: true
+    sdkman_update: true
+    sdkman_install_packages:
+      - { candidate: java, version: 11.0.12-open }
+      - { candidate: maven, version: 3.8.4 }
+    sdkman_defaults:
+      java: 11.0.12-open
+      maven: 3.8.4
