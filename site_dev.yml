@@ -26,15 +26,20 @@
     - role: grzegorznowak.nvm_node
       become: true
       nvm_node_version: "16.13.1"
-    - role: gantsign.oh-my-zsh
+    - role: gantsign.antigen
       users:
-      - username: "{{ user }}"
-        oh_my_zsh:
-          theme: robbyrussell
-          plugins:
-            - git
-            - nvm
-            - node
-            - sdk
-            - docker
-            - docker-compose
+        - username: "{{ user }}"
+          antigen_libraries:
+            - name: oh-my-zsh
+          antigen_theme:
+            name: robbyrussell
+          antigen_bundles:
+            - name: git
+            - name: docker
+            - name: command-not-found
+            - name: zsh-syntax-highlighting
+              url: zsh-users/zsh-syntax-highlighting
+            - name: zsh-autosuggestions
+              url: zsh-users/zsh-autosuggestions
+            - name: zsh-completions
+              url: zsh-users/zsh-completions
