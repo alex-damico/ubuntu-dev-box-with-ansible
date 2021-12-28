@@ -6,7 +6,7 @@ sudo apt install git ansible
 ansible-galaxy collection install community.general
 ```
 
-Git clone del progetto
+Git clone: https://github.com/alex-damico/ubuntu-dev-box-with-ansible.git
 
 NOTE (Only Dev):
 - Sdkman
@@ -37,6 +37,7 @@ ansible-galaxy install gantsign.antigen
         - net-tools
         - git
         - pdfarranger
+        - gparted
 - google-chrome
     - install google-chrome
 - snap

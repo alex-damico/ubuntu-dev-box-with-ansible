@@ -5,3 +5,4 @@ base:
 - net-tools
 - git
 - pdfarranger
+- gparted
