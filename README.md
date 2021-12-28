@@ -38,6 +38,7 @@ ansible-galaxy install gantsign.antigen
         - git
         - pdfarranger
         - gparted
+        - gitg
 - google-chrome
     - install google-chrome
 - snap
