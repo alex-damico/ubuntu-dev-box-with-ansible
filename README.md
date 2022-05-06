@@ -14,6 +14,10 @@ ansible-galaxy role install -r requirements.yml
 ```
 
 NOTE:
+- docker (Only Dev)
+    - [github](https://github.com/geerlingguy/ansible-role-docker)
+    - [galaxy](https://galaxy.ansible.com/geerlingguy/docker)
+
 - Sdkman (Only Dev)
     - [github](https://github.com/Comcast/ansible-sdkman)
     - [galaxy](https://galaxy.ansible.com/comcast/sdkman)
@@ -42,6 +46,7 @@ NOTE:
 - google-chrome
     - install google-chrome
 - snap
+    - Update programs
     - Install programs
         - code
         - keepassxc
@@ -49,17 +54,13 @@ NOTE:
         - vlc
         - flameshot
 - snap-dev
-    - Update programs
     - Install programs
         - termius-app
 - vscode-extensions
     - Install
         - vscode-icons-team.vscode-icons
         - ms-azuretools.vscode-docker
-- docker-compose
-    - Install docker-compose
-- docker-users
-    - enable user 
+- docker
 - sdkman
 - nvm
 - antigen (oh-my-zsh)
@@ -83,5 +84,3 @@ ansible-playbook site_dev.yml
       base:
       - filezilla
 ```
-
-https://galaxy.ansible.com/geerlingguy/docker

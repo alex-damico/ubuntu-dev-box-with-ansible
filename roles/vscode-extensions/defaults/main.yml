@@ -2,3 +2,4 @@
 vscode_extensions:
 - vscode-icons-team.vscode-icons
 - ms-azuretools.vscode-docker
+- redhat.ansible

@@ -2,16 +2,16 @@
 - hosts: localhost
   vars:
     user: dakon
-    docker_users:
-    - "{{ user }}"
   roles:
     - common
     - google-chrome
     - snap
     - snap-dev
     - vscode-extensions
-    - docker-compose
-    - docker-users
+    - role: geerlingguy.docker
+      become: true
+      docker_users:
+      - "{{ user }}"
     - role: comcast.sdkman
       sdkman_user: "{{ user }}"
       sdkman_group: "{{ user }}"
