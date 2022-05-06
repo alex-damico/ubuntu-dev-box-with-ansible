@@ -3,34 +3,34 @@
 ## Requirements
 ```
 sudo apt install git ansible
-ansible-galaxy collection install community.general
 ```
 
 Git clone: https://github.com/alex-damico/ubuntu-dev-box-with-ansible.git
 
-NOTE (Only Dev):
-- Sdkman
+## Install roles and collections
+```
+ansible-galaxy collection install -r requirements.yml
+ansible-galaxy role install -r requirements.yml
+```
+
+NOTE:
+- Sdkman (Only Dev)
     - [github](https://github.com/Comcast/ansible-sdkman)
     - [galaxy](https://galaxy.ansible.com/comcast/sdkman)
-```
-ansible-galaxy install comcast.sdkman
-```
-- NVM
+
+- NVM (Only Dev)
     - [github](https://github.com/grzegorznowak/ansible-nvm-node)
     - [galaxy](https://galaxy.ansible.com/grzegorznowak/nvm_node)
-```
-ansible-galaxy install grzegorznowak.nvm_node
-```
-- antigen (feature)
+
+- antigen
     - [github](https://github.com/gantsign/ansible_role_antigen)
     - [galaxy](https://galaxy.ansible.com/gantsign/antigen)
-```
-ansible-galaxy install gantsign.antigen
-```
+
 
 ## Configuration
 - common
     - Upgrade the OS
+    - Remove dependencies that are no longer required
     - Install programs
         - htop
         - build-essential
@@ -47,14 +47,11 @@ ansible-galaxy install gantsign.antigen
         - keepassxc
         - spotify
         - vlc
-        - libreoffice
         - flameshot
 - snap-dev
+    - Update programs
     - Install programs
-        - docker
         - termius-app
-        - postman
-        - intellij-idea-community
 - vscode-extensions
     - Install
         - vscode-icons-team.vscode-icons
@@ -86,3 +83,5 @@ ansible-playbook site_dev.yml
       base:
       - filezilla
 ```
+
+https://galaxy.ansible.com/geerlingguy/docker

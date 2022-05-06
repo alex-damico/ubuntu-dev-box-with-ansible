@@ -1,6 +1,25 @@
 ---
 - hosts: localhost
+  vars:
+    user: dakon
   roles:
     - common
     - google-chrome
     - snap
+    - vscode-extensions
+    - role: gantsign.antigen
+      users:
+        - username: "{{ user }}"
+          antigen_libraries:
+            - name: oh-my-zsh
+          antigen_theme:
+            name: robbyrussell
+          antigen_bundles:
+            - name: git
+            - name: command-not-found
+            - name: zsh-syntax-highlighting
+              url: zsh-users/zsh-syntax-highlighting
+            - name: zsh-autosuggestions
+              url: zsh-users/zsh-autosuggestions
+            - name: zsh-completions
+              url: zsh-users/zsh-completions

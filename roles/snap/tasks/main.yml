@@ -1,4 +1,7 @@
 ---
+- name: Update programs
+  become: true
+  ansible.builtin.shell: snap refresh
 - name: Install programs
   become: true
   community.general.snap:

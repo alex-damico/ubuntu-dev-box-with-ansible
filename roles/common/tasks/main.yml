@@ -3,6 +3,10 @@
   become: true
   apt:
     upgrade: full
+- name: Remove dependencies that are no longer required
+  become: true
+  apt:
+    autoremove: yes
 - name: Install programs
   become: true
   apt:

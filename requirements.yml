@@ -1,0 +1,8 @@
+---
+collections:
+  - name: community.general
+
+roles:
+  - name: comcast.sdkman
+  - name: grzegorznowak.nvm_node
+  - name: gantsign.antigen
