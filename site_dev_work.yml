@@ -8,6 +8,7 @@
     - net-tools
     - git
     - gitg
+    - libfuse2
     programs:
     - code
     programs_dev:
