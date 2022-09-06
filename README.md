@@ -75,6 +75,11 @@ ansible-playbook site.yml
 ansible-playbook site_dev.yml
 ```
 
+## Start dev for work (virtual machines)
+```
+ansible-playbook site_dev_work.yml
+```
+
 ## Example override
 ```
 ---

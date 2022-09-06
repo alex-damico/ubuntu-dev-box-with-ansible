@@ -1,0 +1,55 @@
+---
+- hosts: localhost
+  vars:
+    user: damico
+    base:
+    - htop
+    - build-essential
+    - net-tools
+    - git
+    - gitg
+    programs:
+    - code
+    programs_dev:
+    - termius-app
+  roles:
+    - common
+    - google-chrome
+    - snap
+    - snap-dev
+    - vscode-extensions
+    - role: geerlingguy.docker
+      become: true
+      docker_users:
+      - "{{ user }}"
+    - role: comcast.sdkman
+      sdkman_user: "{{ user }}"
+      sdkman_group: "{{ user }}"
+      sdkman_auto_answer: true
+      sdkman_update: true
+      sdkman_install_packages:
+        - { candidate: java, version: 11.0.12-open }
+        - { candidate: maven, version: 3.8.4 }
+      sdkman_defaults:
+        java: 11.0.12-open
+        maven: 3.8.4
+    - role: grzegorznowak.nvm_node
+      become: true
+      nvm_node_version: "16.13.1"
+    - role: gantsign.antigen
+      users:
+        - username: "{{ user }}"
+          antigen_libraries:
+            - name: oh-my-zsh
+          antigen_theme:
+            name: robbyrussell
+          antigen_bundles:
+            - name: git
+            - name: docker
+            - name: command-not-found
+            - name: zsh-syntax-highlighting
+              url: zsh-users/zsh-syntax-highlighting
+            - name: zsh-autosuggestions
+              url: zsh-users/zsh-autosuggestions
+            - name: zsh-completions
+              url: zsh-users/zsh-completions

@@ -4,4 +4,4 @@
   community.general.snap:
     classic: yes
     name: "{{ item }}" 
-  loop: "{{ programs }}"
+  loop: "{{ programs_dev }}"
