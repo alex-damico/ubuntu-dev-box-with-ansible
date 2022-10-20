@@ -7,3 +7,4 @@ roles:
   - name: grzegorznowak.nvm_node
   - name: gantsign.antigen
   - name: geerlingguy.docker
+  - name: webarchitect609.jet_brains_toolbox

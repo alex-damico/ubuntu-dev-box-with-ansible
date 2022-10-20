@@ -37,6 +37,11 @@
     - role: grzegorznowak.nvm_node
       become: true
       nvm_node_version: "16.13.1"
+    - role: webarchitect609.jet_brains_toolbox
+      become: true
+      toolbox_version: "1.26.2.13244"
+      toolbox_install_dir: "/home/damico/work/programs"
+      toolbox_install_for_user: "{{ user }}"
     - role: gantsign.antigen
       users:
         - username: "{{ user }}"
