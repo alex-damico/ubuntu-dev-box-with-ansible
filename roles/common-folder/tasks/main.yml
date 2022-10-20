@@ -1,0 +1,13 @@
+---
+- name: Create directory Work
+  file:
+    path: ~/work
+    state: directory
+- name: Create directory Projects
+  file:
+    path: ~/work/projects
+    state: directory
+- name: Create directory Programs
+  file:
+    path: ~/work/programs
+    state: directory
