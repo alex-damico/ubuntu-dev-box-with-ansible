@@ -61,10 +61,15 @@
       sdkman_defaults:
         java: 11.0.12-open
         maven: 3.8.4
-    - role: grzegorznowak.nvm_node
-      become: true
-      nvm_install_script_version: "0.39.2"
-      nvm_node_version: "18.12.0"
-      nvm_dir: "/home/{{ user }}/.nvm/"
-      nvm_user_name: "{{ user }}"
+    - nvm_node
+    # - role: grzegorznowak.nvm_node
+    #   become: true
+    #   nvm_install_script_version: "0.39.2"
+    #   nvm_node_version: "18.12.0"
+    #   nvm_dir: "/home/{{ user }}/.nvm/"
+    #   nvm_user_name: "{{ user }}"
+    # - role: grzegorznowak.nvm_node
+    #   nvm_dir: "/home/{{ user }}/.nvm/"
+    #   nvm_user_name: "{{ user }}"
+    #   nvm_node_version: "18.12.0"
     

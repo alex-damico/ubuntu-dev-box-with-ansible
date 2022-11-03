@@ -1,0 +1,12 @@
+---
+- name: Check nvm is present
+  ansible.builtin.shell: 'command -v nvm'
+  register: is_present
+  ignore_errors: true
+  
+- name: Install nvm
+  ansible.builtin.shell: >
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v"{{nvm.install_script_version}}"/install.sh | bash
+  args:
+    creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
+  when: is_present.failed != false
