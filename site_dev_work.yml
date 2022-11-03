@@ -9,6 +9,7 @@
     - git
     - gitg
     - libfuse2
+    - curl
     programs:
     - code
     programs_dev:
