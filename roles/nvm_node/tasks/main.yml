@@ -1,15 +1,10 @@
 ---
 - name: Check nvm is present
-  ansible.builtin.shell: source {{ ansible_env.HOME }}/.nvm/nvm.sh && command -v nvm
+  ansible.builtin.shell: source {{ ansible_env.HOME }}/.nvm/nvm.sh
   args:
     executable: /bin/bash
   register: is_present
-  failed_when: is_present.rc == 0
   ignore_errors: true
-
-- name: debug
-  ansible.builtin.debug:
-    var: is_present
   
 - name: Install nvm
   ansible.builtin.shell: >
@@ -18,6 +13,7 @@
     creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
     executable: /bin/bash
     warn: false
+  when: is_present.rc == 1
 
 - name: Install version {{ nvm.node_version }}
   ansible.builtin.shell: source {{ ansible_env.HOME }}/.nvm/nvm.sh && nvm install {{ nvm.node_version }}
