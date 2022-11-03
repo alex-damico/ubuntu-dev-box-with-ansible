@@ -62,6 +62,9 @@
         java: 11.0.12-open
         maven: 3.8.4
     - role: grzegorznowak.nvm_node
-      become: true
-      nvm_node_version: "16.13.1"
+      #become: true
+      nvm_install_script_version: "0.39.2"
+      nvm_node_version: "18.12.0"
+      nvm_dir: "/home/{{ user }}/"
+      nvm_user_name: {{ user }}
     
