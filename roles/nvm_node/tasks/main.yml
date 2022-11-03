@@ -1,7 +1,10 @@
 ---
 - name: Check nvm is present
-  ansible.builtin.shell: command -v nvm
+  ansible.builtin.shell: source {{ ansible_env.HOME }}/.nvm/nvm.sh && command -v nvm
+  args:
+    executable: /bin/bash
   register: is_present
+  failed_when: is_present.rc == 0
   ignore_errors: true
 
 - name: debug
@@ -13,10 +16,15 @@
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v{{ nvm.install_script_version }}/install.sh | bash
   args:
     creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
-  when: is_present.failed != false
+    executable: /bin/bash
+    warn: false
 
 - name: Install version {{ nvm.node_version }}
-  ansible.builtin.shell: nvm install {{ nvm.node_version }}
+  ansible.builtin.shell: source {{ ansible_env.HOME }}/.nvm/nvm.sh && nvm install {{ nvm.node_version }}
+  args:
+    executable: /bin/bash
 
 - name: Set default version {{ nvm.node_version }}
-  ansible.builtin.shell: nvm alias default {{ nvm.node_version }}
+  ansible.builtin.shell: source {{ ansible_env.HOME }}/.nvm/nvm.sh && nvm alias default {{ nvm.node_version }}
+  args:
+    executable: /bin/bash
