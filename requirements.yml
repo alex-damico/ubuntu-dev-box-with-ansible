@@ -4,7 +4,6 @@ collections:
 
 roles:
   - name: comcast.sdkman
-  #- name: grzegorznowak.nvm_node
   - name: gantsign.oh-my-zsh
   - name: geerlingguy.docker
   - name: webarchitect609.jet_brains_toolbox
