@@ -26,9 +26,9 @@ NOTE:
     - [github](https://github.com/grzegorznowak/ansible-nvm-node)
     - [galaxy](https://galaxy.ansible.com/grzegorznowak/nvm_node)
 
-- antigen
-    - [github](https://github.com/gantsign/ansible_role_antigen)
-    - [galaxy](https://galaxy.ansible.com/gantsign/antigen)
+- oh_my_zsh
+    - [github](https://github.com/gantsign/ansible-role-oh-my-zsh)
+    - [galaxy](https://galaxy.ansible.com/gantsign/oh-my-zsh)
 
 
 ## Configuration
