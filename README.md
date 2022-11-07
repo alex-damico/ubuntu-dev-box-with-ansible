@@ -63,7 +63,7 @@ NOTE:
 - docker
 - sdkman
 - nvm
-- antigen (oh-my-zsh)
+- oh-my-zsh
 
 ## Start not dev
 ```
