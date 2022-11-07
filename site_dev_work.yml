@@ -18,6 +18,9 @@
     - vscode-icons-team.vscode-icons
     - ms-azuretools.vscode-docker
     - redhat.ansible
+    nvm:
+      install_script_version: "0.39.2"
+      node_version: "18.12.0"
   roles:
     - common
     - google-chrome
@@ -29,7 +32,6 @@
       become: true
       docker_users:
         - "{{ user }}"
-    - oh-my-zsh-plugins
     - role: gantsign.oh-my-zsh
       users:
         - username: "{{ user }}"
@@ -43,6 +45,7 @@
               - zsh-syntax-highlighting
               - zsh-autosuggestions
               - zsh-completions
+    - oh-my-zsh-plugins
     - role: webarchitect609.jet_brains_toolbox
       become: true
       toolbox_version: "1.26.2.13244"
