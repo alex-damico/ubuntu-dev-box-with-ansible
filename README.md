@@ -19,7 +19,7 @@ NOTE:
 - oh-my-zsh
     - [github](https://github.com/gantsign/ansible-role-oh-my-zsh)
     - [galaxy](https://galaxy.ansible.com/gantsign/oh-my-zsh)
-    
+
 - docker (Only Dev)
     - [github](https://github.com/geerlingguy/ansible-role-docker)
     - [galaxy](https://galaxy.ansible.com/geerlingguy/docker)
@@ -28,7 +28,7 @@ NOTE:
     - [github](https://github.com/Comcast/ansible-sdkman)
     - [galaxy](https://galaxy.ansible.com/comcast/sdkman)
 
-- jet-brains-toolbox (Only Dev)
+- jetbrains-toolbox (Only Dev)
     - [github](https://github.com/webarchitect609/ansible-role-jet-brains-toolbox)
     - [galaxy](https://galaxy.ansible.com/webarchitect609/jet_brains_toolbox)
 
@@ -47,7 +47,6 @@ NOTE:
     - Install programs (see default file)
 - snap-dev
     - Install programs (see default file)
-
 - vscode-extensions
     - Install extensions (see default file)
 - nvm-node

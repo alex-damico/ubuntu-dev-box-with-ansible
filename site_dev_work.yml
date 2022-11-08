@@ -62,4 +62,4 @@
       sdkman_defaults:
         java: 11.0.12-open
         maven: 3.8.4
-    - nvm_node
+    - nvm-node
