@@ -9,6 +9,7 @@
     - git
     - gitg
     - libfuse2
+    - curl
     programs:
     - code
     programs_dev:
@@ -17,6 +18,9 @@
     - vscode-icons-team.vscode-icons
     - ms-azuretools.vscode-docker
     - redhat.ansible
+    nvm:
+      install_script_version: "0.39.2"
+      node_version: "18.12.0"
   roles:
     - common
     - google-chrome
@@ -28,23 +32,20 @@
       become: true
       docker_users:
         - "{{ user }}"
-    - role: gantsign.antigen
+    - role: gantsign.oh-my-zsh
       users:
         - username: "{{ user }}"
-          antigen_libraries:
-            - name: oh-my-zsh
-          antigen_theme:
-            name: robbyrussell
-          antigen_bundles:
-            - name: git
-            - name: docker
-            - name: command-not-found
-            - name: zsh-syntax-highlighting
-              url: zsh-users/zsh-syntax-highlighting
-            - name: zsh-autosuggestions
-              url: zsh-users/zsh-autosuggestions
-            - name: zsh-completions
-              url: zsh-users/zsh-completions
+          oh_my_zsh:
+            theme: robbyrussell
+            plugins:
+              - git
+              - nvm
+              - docker
+              - command-not-found
+              - zsh-syntax-highlighting
+              - zsh-autosuggestions
+              - zsh-completions
+    - oh-my-zsh-plugins
     - role: webarchitect609.jet_brains_toolbox
       become: true
       toolbox_version: "1.26.2.13244"
@@ -61,7 +62,4 @@
       sdkman_defaults:
         java: 11.0.12-open
         maven: 3.8.4
-    - role: grzegorznowak.nvm_node
-      become: true
-      nvm_node_version: "16.13.1"
-    
+    - nvm-node

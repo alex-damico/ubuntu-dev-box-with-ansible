@@ -1,0 +1,5 @@
+---
+# defaults file for nvm-node
+nvm:
+  install_script_version: "0.39.2"
+  node_version: "18.12.0"

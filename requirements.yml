@@ -3,8 +3,7 @@ collections:
   - name: community.general
 
 roles:
-  - name: comcast.sdkman
-  - name: grzegorznowak.nvm_node
-  - name: gantsign.antigen
   - name: geerlingguy.docker
+  - name: comcast.sdkman
+  - name: gantsign.oh-my-zsh
   - name: webarchitect609.jet_brains_toolbox

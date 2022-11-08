@@ -7,3 +7,4 @@ base:
 - pdfarranger
 - gparted
 - gitg
+- curl
