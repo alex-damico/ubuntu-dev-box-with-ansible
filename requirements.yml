@@ -3,7 +3,7 @@ collections:
   - name: community.general
 
 roles:
+  - name: geerlingguy.docker
   - name: comcast.sdkman
   - name: gantsign.oh-my-zsh
-  - name: geerlingguy.docker
   - name: webarchitect609.jet_brains_toolbox

@@ -10,10 +10,16 @@ Git clone: https://github.com/alex-damico/ubuntu-dev-box-with-ansible.git
 ## Install roles and collections
 ```
 ansible-galaxy collection install -r requirements.yml
+```
+```
 ansible-galaxy role install -r requirements.yml
 ```
 
 NOTE:
+- oh-my-zsh
+    - [github](https://github.com/gantsign/ansible-role-oh-my-zsh)
+    - [galaxy](https://galaxy.ansible.com/gantsign/oh-my-zsh)
+    
 - docker (Only Dev)
     - [github](https://github.com/geerlingguy/ansible-role-docker)
     - [galaxy](https://galaxy.ansible.com/geerlingguy/docker)
@@ -22,48 +28,35 @@ NOTE:
     - [github](https://github.com/Comcast/ansible-sdkman)
     - [galaxy](https://galaxy.ansible.com/comcast/sdkman)
 
-- NVM (Only Dev)
-    - [github](https://github.com/grzegorznowak/ansible-nvm-node)
-    - [galaxy](https://galaxy.ansible.com/grzegorznowak/nvm_node)
-
-- oh_my_zsh
-    - [github](https://github.com/gantsign/ansible-role-oh-my-zsh)
-    - [galaxy](https://galaxy.ansible.com/gantsign/oh-my-zsh)
+- jet-brains-toolbox (Only Dev)
+    - [github](https://github.com/webarchitect609/ansible-role-jet-brains-toolbox)
+    - [galaxy](https://galaxy.ansible.com/webarchitect609/jet_brains_toolbox)
 
 
 ## Configuration
 - common
     - Upgrade the OS
     - Remove dependencies that are no longer required
-    - Install programs
-        - htop
-        - build-essential
-        - net-tools
-        - git
-        - pdfarranger
-        - gparted
-        - gitg
+    - Install programs (see default file)
+- common-folder
+    - create folder (see default file)
 - google-chrome
     - install google-chrome
 - snap
     - Update programs
-    - Install programs
-        - code
-        - keepassxc
-        - spotify
-        - vlc
-        - flameshot
+    - Install programs (see default file)
 - snap-dev
-    - Install programs
-        - termius-app
+    - Install programs (see default file)
+
 - vscode-extensions
-    - Install
-        - vscode-icons-team.vscode-icons
-        - ms-azuretools.vscode-docker
+    - Install extensions (see default file)
+- nvm-node
+    - Install nvm and node (default: node 18.12.0)
 - docker
 - sdkman
-- nvm
 - oh-my-zsh
+- oh-my-zsh-plugins
+    - Download plugin custom (see default file)
 
 ## Start not dev
 ```
