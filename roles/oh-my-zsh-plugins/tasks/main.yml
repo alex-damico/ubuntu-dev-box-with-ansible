@@ -4,3 +4,7 @@
     repo: "{{ item.url }}"
     dest: "{{ folder }}/{{ item.name }}"
   loop: "{{ plugins }}"
+
+- name: Install Spaceship
+  include_tasks: spaceship-prompt
+  when: spaceship.enabled

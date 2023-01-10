@@ -1,0 +1,5 @@
+---
+- name: Git checkout
+  ansible.builtin.git:
+    repo: "{{ spaceship.url }}"
+    dest: "{{ spaceship.folder }}"

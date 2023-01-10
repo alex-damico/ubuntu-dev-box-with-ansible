@@ -8,3 +8,8 @@ plugins:
   url: https://github.com/zsh-users/zsh-autosuggestions.git
 - name: zsh-completions
   url: https://github.com/zsh-users/zsh-completions.git
+
+spaceship: 
+  enabled: true
+  folder: /home/{{ user }}/.oh-my-zsh/themes/spaceship-prompt
+  url: https://github.com/spaceship-prompt/spaceship-prompt.git
